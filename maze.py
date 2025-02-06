@@ -12,7 +12,9 @@ class Maze:
         cell_size_x,
         cell_size_y,
         win=None,
+        seed=None,
     ):
+        self._cells = []
         self._x1 = x1
         self._y1 = y1
         self._num_rows = num_rows
@@ -20,10 +22,12 @@ class Maze:
         self._cell_size_x = cell_size_x
         self._cell_size_y = cell_size_y
         self._win = win
-        self._cells = []
+        if seed:
+            random.seed(seed)
         
         self._create_cells()
         self._break_entrance_and_exit()
+        self._break_walls_r(0, 0)
 
     def _create_cells(self):
         for i in range(self._num_cols):
