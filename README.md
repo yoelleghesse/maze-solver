@@ -1,6 +1,6 @@
 ## Maze Solver
 
-A Python project to generate and solve mazes using depth-first search (DFS) algorithm.
+A Python project to generate and solve mazes.
 
 ## How to Run
 
